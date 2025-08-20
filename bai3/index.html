@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <MARQUEE>
+        <img src="ttps://toigingiuvedep.com/wp-content/uploads/2022/07/hinh-anh-thanh-guom-diet-quy-tanjiro.jpg">
+    </MARQUEE>
+    <h1>Bài 3</h1>
+    <!-- Danh sách list -->
+     <!-- Có thứ tự ol,li -->
+      <p>Danh sách các công việc buổi sáng </p>
+      <ol>
+        <li>Thức dậy</li>
+        <li>Đánh răng</li>
+        <li>Đi học</li>
+        <li>Giải lao</li>
+      </ol>
+      <!-- không theo thứ tự ul,li -->
+      <ul>
+        <li>Python</li>
+        <li>PHP</li>
+        <li>JavaScript</li>
+        <li>C#</li>
+      </ul>
+      <!-- form phần chứa phần tử , tương tác với người dùng,readonly: không sửa được nội dung bên trong  -->
+       <h1>form</h1>
+       <form>
+         <div>
+            <b>Họ và tên: </b>
+            <input type="text" name="hoten" placeholder="Nhập tên vào đây">
+         </div>
+         <br>
+         <div>
+            <b>Năm: </b>
+              <input type="text" name="nam" value="2025" readonly>
+         </div>
+          <div>
+            <b>Giới thiệu về bản thân: </b><br>
+              <textarea name="gioithieu">Nhập giới thiệu...</textarea>
+         </div>
+          <div>
+            <b>Email: </b><br>
+              <input type="email" name="email" placeholder="Nhập Email: ">
+         </div>
+         <br>
+         <div>
+              <b>Số điện thoại:</b><br>
+              <input type="tel" name="sodienthoai" placeholder="Dạng số: 09xxxxxxxx" required pattern="([0]{1}([0,3,9]{1})[0-9]{8})" >           
+         </div>
+         <br>
+         <!-- radio lựa chọn được 1 cái   -->
+         <div>
+            <b>Giới Tính: </b> <br>
+            <input type="radio" name="Giới Tính " value="Nam"> Nam <br>
+            <input type="radio" name="Giới Tính " value="Nữ"> Nữ <br>
+            <input type="radio" name="Giới Tính " value="Không xác định"> Không xác định <br>
+         </div>
+         <br>
+         <!-- check lựa chọn được nhiều cái  -->
+          <div>
+            <b>Sở Thích: </b><br>
+            Game: <input type="checkbox" name="sothich" value="game"><br>
+            Music: <input type="checkbox" name="sothich" value="music"><br>
+            Sport: <input type="checkbox" name="sothich" value="sport"><br>
+          </div>
+          <br>
+          <!-- list danh sách các lựa chọn -->
+          <div>
+            <b>Trình duyệt ưa thích: </b>
+            <input list="browsers">
+            <datalist id="browsers">
+                       <option value="Internet Explorer"></option>
+                       <option value="Friebox"></option>
+                       <option value="Chrome"></option>
+                       <option value="Opera"></option>
+            </datalist>
+            <br>
+            <!-- lựa chọn mặc định cái đầu tiên -->
+            <select name="browsers">
+                  <option value="Internet Explorer">Internet Explorer</option>
+                  <option value="Friebox">Friebox</option>
+                  <option value="Chrome">Chrome</option>
+                  <option value="Opera">Opera</option>
+                  <option value="Safari">Safari</option>
+                  <option value="Cốc cốc">Cốc cốc</option>             
+            </select>
+        </div>
+        <div>
+            <!-- tạo 1 thanh kéo thay đổi  -->
+            0 <input type="range" value="20">100
+        </div>
+        <div>
+            <!-- number độ tuổi, step bước nhảy  -->
+             <b>Tuổi</b><br>
+             <input type="number" name="tuoi" step="3">
+        </div>
+        <br>
+        <div>
+            <b>Ngày tháng năm sinh: </b>
+            <input type="date" name="ngaythangnamsinh">   
+        </div>
+        <br>
+        <div>
+            <b>Màu sắc yêu thích: </b>
+            <input type="color" name="mausacyeuthich">
+        </div>
+        <br>
+        <div>
+            <b>Chọn ảnh đại diện: </b>
+            <input type="file" name="" id="">
+        </div>
+        <br>
+        <div>
+            <b>Mật khẩu: </b>
+            <input type="password" name="" id="">
+        </div>
+        <br>
+        <div>
+            <input type="reset">
+        </div>
+        <!--  -->
+        <!-- buttons nút bấm , dùng submit  -->
+          <br>
+         <div>
+            <input type="submit">            
+         </div>
+       </form>
+       <iframe width="560" height="315" src="https://www.youtube.com/embed/ZDHLPxWmdCU?si=ytlROk4iscxmY60f" ></iframe>
+       <video controls width="560" height="315">
+        <source src="c:\Users\LENOVO\Downloads\video.mp4" type="video/mp4">
+    </video>
+
+    <audio controls>
+        <source src="ChuEchCon.mp3" type="audio/mp3">
+    </audio>
+</html>
