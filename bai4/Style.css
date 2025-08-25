@@ -1,0 +1,32 @@
+h3{
+    color:blue;
+}
+/* thẻ id dùng # */
+#title {
+    background-color : red
+}
+/* class thì dùng dấu chấm */
+.bg{
+    background-color : black
+}
+
+P{
+    color:brown;
+    background-color:blueviolet;
+}
+
+.box1{
+    background-color:brown;
+}
+.box2{
+    background-color:blue;
+    /* truyền 1 giá trị:cách xung quanh=giá trị đó */
+    /* 2 giá trị :giá trị 1 (Trên dưới),2 (Trái, Phải ) */
+    /* margin: 50px 30px 100px 20px; */
+    width:50%;
+    /* margin:auto xếp khối ra giữa */
+    margin: 50px auto
+}
+.box3{
+    background-color:blanchedalmond;
+}
