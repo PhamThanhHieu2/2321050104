@@ -1,0 +1,71 @@
+body{
+    margin: 0;
+}
+
+ ul{
+    margin: 0;
+ }
+
+.danhmuc{
+    background-color:#2fa4e7 ;
+    padding:20px;
+}
+
+.danhmuc-danhsach{
+    display:flex;
+    list-style:none;
+    /* bỏ dấu chấm  */
+}
+
+.danhmuc-muc{
+    margin:10px;
+}
+.danhmuc-lienket{
+    color:white;
+    text-decoration:none ;
+    /* bỏ gạch  chân thẻ liên kết */
+    font-size: large;
+}
+
+.danhmuc-lienket:hover{
+    color:pink;
+}
+.logo{
+    height:100px;
+    background-color: black;
+}
+
+main{
+    display:flex;
+}
+
+.noidung-trai{
+    width:80%;
+    border-radius: 10px;
+}
+
+.noidung-phai{
+    height:1000px;
+    background-color:aquamarine;
+    width:20%;
+}
+
+.tieude{
+    background-color:#2fa4e7 ;
+    padding:20px;
+    color:white;
+    font-size: large;
+    font-weight:bold;
+    border-radius: 10px 10px 0 0;
+}
+
+.tintuc-danhsach{
+    display: flex;
+    justify-content: space-between;
+}
+
+.baiviet{
+    height: 200px;
+    background-color: beige;
+    width: 32%;
+}

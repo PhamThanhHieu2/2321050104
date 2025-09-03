@@ -1,23 +1,25 @@
+/* dùng trực tiếp vào selector */
 h3{
     color:blue;
 }
-/* thẻ id dùng # */
+/* thẻ id dùng, id chỉ dùng cho 1 cái duy nhất # */
 #title {
-    background-color : red
+    background-color : red;
 }
-/* class thì dùng dấu chấm */
+/* class thì dùng dấu chấm, class dùng được cho nhiều cái khác nhau */
 .bg{
-    background-color : black
+    background-color : black;
 }
 
 P{
-    color:brown;
+    color: red;
     background-color:blueviolet;
 }
 
 .box1{
-    background-color:brown;
+    background-color: red;
 }
+
 .box2{
     background-color:blue;
     /* truyền 1 giá trị:cách xung quanh=giá trị đó */
@@ -27,6 +29,7 @@ P{
     /* margin:auto xếp khối ra giữa */
     margin: 50px auto
 }
+
 .box3{
     background-color:blanchedalmond;
 }
