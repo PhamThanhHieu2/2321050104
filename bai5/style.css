@@ -71,12 +71,14 @@ main{
 }
 .thongbao-danhsach{
     display: flex;
-    margin-bottom: 100px; 
+    margin-bottom: 10px;
+ 
 }
 .haiphan{
     display:flex;
 }
 .haiphan .phanmot{
+    height: 300px;
     flex: 40%;
     margin-top: 15px;
 }
@@ -90,8 +92,17 @@ main{
     font-size: 10px;
     color: gray;
 }
-.haiphan .phanhai {
+.phanhai i{
+    display: block;
+    text-align: right;
+}
+.phanhai li{
+    padding:   6px 10px;
+}
+.phanhai a{
     flex: 60%;
+    color: #000;
+    text-decoration: none;
     margin-left: 15px;
     margin-top: 20px;
 }
@@ -99,10 +110,6 @@ main{
     list-style: none;
     margin: 0;
     padding: 0;
-}
-.haiphan .phanhai li {
-    margin-bottom: 10px;
-    font-size: large;
 }
 .dangnhap-danhsach{
     display: flex;
@@ -118,8 +125,34 @@ main{
     margin: 0;
     padding: 0;
 }
-.huongdan-danhsach li {
-    margin-bottom: 10px;
-    font-size: large;
-    
-} 
+.huongdan-danhsach a{
+    color: #000;
+    text-decoration: none;
+}
+.huongdan-danhsach i{
+    display: block;
+    text-align: right;
+}
+.maqr-caidatappmobile{
+    width: 100%;
+    height: 100%;
+}
+.box1{
+    width: 100%;
+    height: 200px;
+    margin-top: 10px;
+}
+.box1 img{
+    width: 100%;
+}
+.box2{
+    width: 100%;
+    height: 200px;
+}
+.box2 img{
+    width: 100%;
+}
+.cuoi{
+    background-color: #2fa4e7;
+    padding: 20px;
+}
