@@ -148,7 +148,11 @@ footer {
       height: 20px;
       margin-right: 10px;
 }
-.footer-bottom {
+.footer-cuoi {
       font-size: 13px;
-      color: gray;
+      color: white;
+}
+.footer-cuoi p { 
+  text-decoration: none;
+  margin-right: 100px;
 }
