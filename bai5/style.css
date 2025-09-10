@@ -43,6 +43,7 @@ main{
     border-radius: 10px;
     margin-left: 10px;
     margin-top: 10px ;
+
 }
 .tieude{
     background-color:#2fa4e7 ;
@@ -120,6 +121,12 @@ main{
     flex-direction: column;
     margin-bottom: 10px;
 }
+.qmk{
+    margin-left: 200px;
+}
+.dn{
+    margin-left: 100px;
+}
 .huongdan-danhsach ul {
     list-style: none;
     margin: 0;
@@ -138,7 +145,7 @@ main{
     height: 100%;
 }
 .box1{
-    width: 100%;
+    width: 100%;-
     height: 200px;
     margin-top: 10px;
 }
@@ -156,3 +163,4 @@ main{
     background-color: #2fa4e7;
     padding: 20px;
 }
+
