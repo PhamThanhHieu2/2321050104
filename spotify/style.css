@@ -1,0 +1,95 @@
+/* body {
+    background-color: grey;
+    color: white;
+    margin: 0;
+}
+background-color: grey; → nền xám.
+color: white; → chữ mặc định màu trắng.
+margin: 0; → bỏ khoảng trắng mặc định của trình duyệt.
+.container {
+    width: 35%;
+    margin: 40px auto;
+    background-color: black;
+    padding: 40px 0;
+    border-radius: 15px;
+}
+width: 35% → form rộng 35% màn hình.
+margin: 40px auto; → cách lề trên/dưới 40px, căn giữa ngang.
+background-color: black; → nền màu đen.
+padding: 40px 0; → khoảng cách trong trên/dưới 40px.
+border-radius: 15px; → bo tròn góc.
+.noidung {
+    width: 70%;
+    margin: auto;
+}
+Chiều rộng nội dung 70% so với container, và căn giữa.
+.form {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+Form rộng 80% của .noidung, căn giữa, chữ & nút căn giữa.
+.khoi-nut {
+    margin-bottom: 15px;
+}
+Mỗi khối nút cách dưới 15px.
+button {
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 20px;
+    color: white;
+    background-color: black;
+    border: 2px solid white;
+}
+Nút rộng 100% khối chứa.
+Cao 10px (trên + dưới).
+Bo tròn 20px.
+Chữ trắng, nền đen, viền trắng.
+.noidung-tren {
+    border-bottom: 2px solid grey;
+}
+Thêm gạch ngang màu xám chia phần trên & dưới.
+input {
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+}
+Ô input rộng 100%, cao 10px.
+Bo tròn 5px.
+Nền đen, chữ trắng, viền trắng.
+.form-duoi {
+    width: 80%;
+    background-color: black;
+    margin: auto;
+}
+Form dưới rộng 80%, nền đen, căn giữa.
+.google {
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 20px;
+    background-color: green;
+    color: black;
+    border: none;
+}
+Nút đặc biệt (Log In).
+Nền xanh, chữ đen, không viền.
+a {
+    color: white;
+}
+Link màu trắng (theo giao diện tối).
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: black;
+}
+Footer rộng toàn màn hình.
+position: fixed; bottom: 0; → dính ở dưới cùng khi cuộn trang.
+Nền đen.
+ */
+
+
+

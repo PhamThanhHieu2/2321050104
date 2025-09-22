@@ -132,11 +132,6 @@ footer {
       width: 120px;
       margin-bottom: 10px;
 }
-.footer-title {
-      font-weight: bold;
-      margin-bottom: 10px;
-      color: white;
-}
 .footer-links a {
       display: block;
       margin-bottom: 6px;
@@ -154,5 +149,7 @@ footer {
 }
 .footer-cuoi p { 
   text-decoration: none;
-  margin-right: 100px;
+  margin: 0px 0px 0px 200px;
+  padding: 0;
+  text-align: justify;
 }

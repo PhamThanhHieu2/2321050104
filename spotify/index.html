@@ -1,0 +1,165 @@
+<!-- 
+ display: flex sắp xếp các phần tử con theo hàng ngang. 
+ flex-direction quyết định icon nằm theo hàng cha display : flex.
+ justify-content: space-between; đẩy phần tử về hai bên, để khoảng trống ở giữa.
+ width: 70%; chiều rộng bằng 70% khung trình duyệt.
+ margin: auto; căn giữa phần tử theo chiều ngang.
+ margin: 0; → loại bỏ khoảng trống mặc định xung quanh trang web (trình duyệt thường có margin mặc định 8px).
+align-items: center; → căn giữa theo chiều dọc.
+gap: 20px; → khoảng cách 20px giữa các mục.
+padding: 10px 0; → thêm khoảng cách trên & dưới. 
+width Logo chiếm 15% chiều ngang của header.
+list-style: none; → bỏ dấu chấm của danh sách.
+padding: 0; → bỏ padding mặc định.
+gap: 20px; → khoảng cách giữa các mục.
+text-decoration: none; → bỏ gạch chân mặc định.
+font-weight: bolder; → chữ đậm hơn.
+color: #9b9b9b;  màu xám.
+font-size: 16px; → cỡ chữ 16px.
+font-family: → ưu tiên font "SFProDisplay", nếu không có thì dùng Arial, cuối cùng sans-serif.
+a:hover {
+    color: orange;
+}
+Khi di chuột vào link → đổi sang màu cam.
+.chucnang {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+Các nút nằm ngang, căn giữa dọc, cách nhau 20px.
+.muagoi {
+    background-color: orange;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    width: 100px;
+    border-radius: 10px;
+}
+Nền cam, chữ trắng.
+Không viền.
+Có khoảng đệm 10px trên dưới, 20px trái phải.
+Chiều rộng cố định 100px.
+Bo góc 10px.
+.dangnhap {
+    background-color: black;
+    color: white;
+    border: none;
+    width: 100px;
+}
+Nền đen, chữ trắng.
+Không viền.
+Rộng 100px.
+main {
+    background-color: #131314;
+    color: white;
+    width: 100%;
+    /* height: 1000px; */
+}
+Nền màu xám đen, chữ trắng.
+Chiếm toàn bộ chiều ngang.
+(height: 1000px; bị comment đi, nên chưa có chiều cao cố định).
+.quangcao {
+    display: flex;
+    justify-content: center;
+}
+Sắp xếp các phần tử quảng cáo nằm ngang.
+justify-content: center; → căn giữa.
+container {
+    width: 70%;
+    background-color: black;
+    margin: auto;
+}
+Chiều rộng 70%.
+Nền đen.
+margin: auto; → căn giữa.
+.banner {
+    width: 98%;
+}
+
+.qc {
+    margin-top: 10px;
+    width: 98%;
+    border-radius: 10px;
+}
+Banner chiếm 98% container.
+QC cách trên 10px, rộng 98%, bo góc 10px.
+.tentheloai {
+    margin: 20px;
+}
+Có khoảng cách 20px xung quanh.
+.danhsach {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+Hiển thị ngang (flex).
+Các item trải đều khoảng cách.
+Cách trên 20px.            
+.phim {
+    width: 19%;
+}
+.phim img {
+    width: 100%;
+}
+Mỗi phim chiếm 19% khung chứa.
+Ảnh phim rộng 100% khung.
+footer {
+    background-color:  #131314;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+Nền đen xám, chữ trắng.
+Chữ căn giữa.
+Padding 20px.
+.footer-container {
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+Footer rộng 1200px, căn giữa.
+Các cột hiển thị ngang.
+Các cột cách đều 2 bên.
+.footer-column {
+    flex: 1;
+    width: 200px;
+}
+Mỗi cột chiếm 1 phần bằng nhau.
+Rộng 200px.
+.footer-logo img {
+    width: 120px;
+    margin-bottom: 10px;
+}
+Logo rộng 120px, cách dưới 10px.
+.footer-links a {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    text-decoration:none;
+}
+Link trong footer hiển thị dạng khối (xuống dòng).
+Cách nhau 6px.
+Chữ hơi đậm (500).
+Bỏ gạch chân
+.footer-mangxh img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+Icon mạng xã hội rộng 20px, cao 20px, cách phải 10px.
+.footer-cuoi {
+    font-size: 13px;
+    color: white;
+}
+Chữ nhỏ (13px), màu trắng.
+.footer-cuoi p { 
+  text-decoration: none;
+  margin: 0px 0px 0px 200px;
+  padding: 0;
+  text-align: justify;
+}
+Bỏ gạch chân trong đoạn văn.
+Lề trái 200px.
+Không padding.
+Căn đều chữ (justify).-->

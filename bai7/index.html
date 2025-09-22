@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- internal javascript, <br> -->
+    <script>
+        document.writeln("Hello Word!" + "<br>" );
+        // bien , khai bao bien dung let or var
+        // De noi chuoi trong js dung +
+        let hoTen =("Pham Thanh Hieu" + "<br>" );
+         document.writeln(hoTen)
+
+        let soThuNhat = 10;
+        let soThuHai = 5;
+        let KetQua = 0;
+        // phep +
+        // phep-
+        // phep *
+        // phep / 
+        ketQua = soThuNhat + soThuHai;
+        //  soThuNhat %= soThuHai;                                                           
+        // document.writeln(soThuNhat);
+         // document.writeln(++ketQua) muon tang them or - di viet ++ o trc ketQua
+        //  ==(chi quan tam den so k qt kieu du lieu) != ;===(so sanh ca kieu du lieu va so ) !==
+        // ! phu dinh > < >= <=
+        let thongTinSinhVien = {
+            hoTen: "Pham Thanh Hieu",
+            mssv: "2321050104",
+            gioitinh: true,
+            tuoi: 20,
+            lop: "Dai Hoc_Mang may tinh_K68A"
+           
+        }
+        let diachinnhaban = {
+            thanhpho: "Nam Dinh",
+            phuong: "Giao Thuy",
+            duong:"abc",
+            sonha: 123
+        }
+          thongTinSinhVien.diachi =diachinnhaban;
+        document.writeln(
+            "Xin Chao Ban: " + thongTinSinhVien.hoTen + thongTinSinhVien.tuoi + "tuoi"
+        );
+        let namNay =2025;
+        document.writeln("Ban"
+            + thongTinSinhVien.hoTen
+            + "Sinh Nam"
+            + (namNay - thongTinSinhVien.tuoi)
+        );
+    </script>
+</body>
+
+</html>
