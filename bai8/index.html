@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <script>
+        let donHang = {
+            maDonHang: "DH1"
+        }
+  let thongTinDonHang = {
+            maDonHang: "12345678",
+            thongTinKhachHang: {
+                hoTen: "MinhHieu",
+                soDienThoai: "0987654321",
+                trangThaiThanhVienThanThiet: false,
+            },
+            danhSachSanPham: {
+                sp01: {
+                    maSanPham: "1",
+                    tenSanPham: "Matcha",
+                    soLuong: 10,
+                    giaTien: "10000",
+                },
+                sp02: {
+                    maSanPham: "2",
+                    tenSanPham: "Cà phê",
+                    soLuong: 10,
+                    giaTien: "20000",
+                },
+                sp03: {
+                    maSanPham: "3",
+                    tenSanPham: "Trà sữa",
+                    soLuong: 15,
+                    giaTien: "20000",
+                }
+            },
+            thanhToanThanhCong: true,
+            diaChiGiaoHang: "Đông Ngạc"
+        }
+let tongSP1 = thongTinDonHang.danhSachSanPham.sp01.giaTien * thongTinDonHang.danhSachSanPham.sp01.soLuong;
+        let tongSP2 = thongTinDonHang.danhSachSanPham.sp02.giaTien * thongTinDonHang.danhSachSanPham.sp02.soLuong;
+        let tongSP3 = thongTinDonHang.danhSachSanPham.sp03.giaTien * thongTinDonHang.danhSachSanPham.sp03.soLuong;
+
+        let tongTien = tongSP1 + tongSP2 + tongSP3;
+        
+        // document.writeln("Độ dài của mã đơn hàng:" + thongTinDonHang.danhSachSanPham.length);
+        // mystring[] chi ra vitri cua ky tu 
+        // cat chuoi mystring.slice ()
+        // REPLACE thay the 
+        // chuyen doi chu hoa thanh chu thuong  lower : thuong up : hoa 
+        // Tim kiem chuoi indexOf vi tri xuat hien dau tien cua ki tu do 
+        // neu co : vi tri , khong : -1
+        // includes neu co tra ra true khong co tra ra false\
+        //  split chuyen chuoi thanh 1 mang (cu space thi se chia ra) space cung la 1 phan tu 
+        // kiem tra chuoi co bat dau bang ki tu nao khong 
+
+
+        // var mystring = "Hello Hieu";
+        // document.writeln(mystring.split(''));
+
+
+        // let danhSach =[
+        //     "Pham Van A","Nguyen Van B","Pham Van C","Tran Thi D"
+        // ]
+        //document.writeln(danhSach[1].startsWith("Pham"));
+        
+        // chuyen doi chuoi thanh so
+        // parselnt() chuyen doi chuoi thanh so nguyen
+        // parseFloat() chuyen doi chuoi thanh so 
+        // toFixed() de dinh dang so voi chu so thap phan
+        // isNaN() kiem tra xem 1 gia tri co phai la  NaN hay khong
+        // isFinite() kiem tra xem 1 gia tri co phai la so huu han hay khong
+        let so = "123";
+        document.writeln(typeof(so));
+        document.writeln(typeof(Number(so)));
+
+         document.writeln(isNaN(10));
+         document.writeln(isFinite(3));
+
+        //  Date(viet ngay h vao khoi tao ngay ma minh mong muon )
+        let toDay = new Date();
+        document.writeln(toDay.getDate());
+
+ </script>
+</body>
+</html>
