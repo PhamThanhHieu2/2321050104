@@ -57,17 +57,12 @@ let tongSP1 = thongTinDonHang.danhSachSanPham.sp01.giaTien * thongTinDonHang.dan
         // includes neu co tra ra true khong co tra ra false\
         //  split chuyen chuoi thanh 1 mang (cu space thi se chia ra) space cung la 1 phan tu 
         // kiem tra chuoi co bat dau bang ki tu nao khong 
-
-
         // var mystring = "Hello Hieu";
         // document.writeln(mystring.split(''));
-
-
-        // let danhSach =[
+        // let danhSach [
         //     "Pham Van A","Nguyen Van B","Pham Van C","Tran Thi D"
         // ]
         //document.writeln(danhSach[1].startsWith("Pham"));
-        
         // chuyen doi chuoi thanh so
         // parselnt() chuyen doi chuoi thanh so nguyen
         // parseFloat() chuyen doi chuoi thanh so 
@@ -82,36 +77,50 @@ let tongSP1 = thongTinDonHang.danhSachSanPham.sp01.giaTien * thongTinDonHang.dan
          document.writeln(isFinite(3));
 
         //  Date(viet ngay h vao khoi tao ngay ma minh mong muon )
-        let toDay = new Date();
-        document.writeln(toDay.getDate());
-
+        let toDay = new Date(2025 , 9, 28);
+        document.writeln(toDay);
         // Trả về xâu xác định kiểu dữ liệu của biến typeof     
         let so = 5;
          document.write(typeof(so)); 
         //  Cắt chuỗi (.slice())
-         let chuoi = "SanPham_A_2024" +"<br>" ; document.writeln(chuoi.slice(10));
+         let chuoi = "SanPham_A_2024" +"<br>" ; 
+         document.writeln(chuoi.slice(10));
         // Thay thế (.replace()) 
-         let thongBao = "Xin chao ban." +"<br>"; document.writeln(thongBao.replace("ban", "Hieu"));
+         let thongBao = "Xin chao ban." +"<br>"; 
+         document.writeln(thongBao.replace("ban", "Hieu"));
         //Chuyển chữ hoathường
-         let ten = "Pham Thanh Hieu" + "<br>"; document.writeln(ten.toUpperCase()); document.writeln(ten.toLowerCase());
+         let ten = "Pham Thanh Hieu" + "<br>"; 
+         document.writeln(ten.toUpperCase()); 
+         document.writeln(ten.toLowerCase());
         // Tìm vị trí (.indexOf())
-         let text = "JavaScript" + "<br>"; document.writeln(text.indexOf("S")); document.writeln(text.indexOf("Z"));
+         let text = "JavaScript" + "<br>"; 
+         document.writeln(text.indexOf("S"));  
+         document.writeln(text.indexOf("Z"));
         //  Kiểm tra tồn tại (.includes())
-    	let s = "Hà Nội" + "<br>"; document.writeln(s.includes("Hà")); document.writeln(s.includes("HCM"));
+    	 let s = "Hà Nội" + "<br>";
+         document.writeln(s.includes("Hà")); 
+         document.writeln(s.includes("HCM"));
         // Chia chuỗi thành mảng (.split())
-    	let cau = "lap trinh web"; document.writeln(cau.split(' '));
+    	 let cau = "lap trinh web" + "<br>"; 
+         document.writeln(cau.split(' '));
         // Kiểm tra chuỗi bắt đầu (.startsWith())
-    	let maSV = "2321050104"; document.writeln(maSV.startsWith("2321"));
+    	 let maSV = "2321050104"; 
+         document.writeln(maSV.startsWith("2321"));
         // Chuỗi thành Số Nguyên (parseInt())
-    	let diem = "10.5 diem"; document.writeln(parseInt(diem));
+    	 let diem = "10.5 diem"; 
+         document.writeln(parseInt(diem));
         // Chuỗi thành Số Thực (parseFloat())
-    	let gia = "99.99 USD"; document.writeln(parseFloat(gia));
+    	 let gia = "99.99 USD"; 
+         document.writeln(parseFloat(gia));
         // Định dạng thập phân (.toFixed())
-    	let pi = 3.14159; document.writeln(pi.toFixed(2));	
+    	 let pi = 3.14159; 
+         document.writeln(pi.toFixed(2));	
         // Kiểm tra NaN (isNaN())
-	    document.writeln(isNaN("abc")); document.writeln(isNaN(123));
+	    document.writeln(isNaN("abc")); 
+        document.writeln(isNaN(123));
         // Kiểm tra Số Hữu Hạn (isFinite())
-     	document.writeln(isFinite(100)); document.writeln(isFinite(Infinity));
+     	document.writeln(isFinite(100)); 
+        document.writeln(isFinite(Infinity));
  </script>
 </body>
 </html>

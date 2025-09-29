@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <script>
+        // mang
+        // let arr = [1, 2, 3, 4, 5, 'a', 'b', 5, 6,];
+        // document.writeln(arr.length);
+        // // doc phan tu trong mang 
+        // // lastindexof tra ra phan tu cuoi cung trong mang 
+        // // kiem tra xem co phai la mang khong array.isarray
+        // document.writeln(Array.isArray(arr) + "<br>");
+
+        // // concat la noi cac mang lai voi nhau
+        // let a, b, c, d;
+        // a =[1, 2, 3,];
+        // b ="JavaScript";
+        // c =[42, "VBScript"];
+        // d = a.concat(b, c);
+        // // thay the 
+        // d[3] = 4;
+        // document.writeln(d +"<br>");
+        // // join muon them giua cac bat ky dau gi thi them vao 
+        // document.writeln(d.join() +"<br>")
+        // // pop lay phan tu bo khoi mang  gan khong tuy no
+        // document.writeln(d.pop() + "<br>")
+        // // push day vao vi tri cuoi cung
+        // d.push("Hieu")
+        // document.writeln(d +"<br>");
+        // // reverse dao vi tri phan tu trong mang
+        // document.writeln(d.reverse() + "<br>")
+        // // shift() xoa phan tu dau tien arr.shift();
+        // document.writeln(arr.shift() + "<br>")
+        // // unshift() them phan tu vao dau mang arr.shift(0);
+        // document.writeln(arr.unshift(0))
+        // cau dien kien
+        let homNay=new Date();
+        let now=homNay.getHours();
+          if(now<10){
+           document.write("chao buổi sáng"+"<br>");
+        }
+          else if(now >=10 && now <12){
+           document.write("chào buổi trưa"+"<br>");
+        }
+          else if (now>=12 && now <17){
+           document.write("chào buổi chiều"+"<br>");
+        }
+          else if (now>=17 && now <22){
+           document.write("chào buổi tối"+"<br>");
+        }
+          else{
+           document.write("chào buổi đêm");
+        }
+
+        let so = 10000000000000001;
+        let soCuoiCung = parseInt(so[so.length -1]);
+         if(soCuoiCung%2==0){
+             document.writeln("la so chan" +"<br>" )
+         }
+         else{
+             document.writeln("la so le" +"<br>")
+        }
+    </script>
+</body>
+</html>
