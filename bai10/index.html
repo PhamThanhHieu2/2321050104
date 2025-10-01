@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <script>
+        // alert("Xin chao ban!")
+        
+        // let result = confirm("Press a button");
+        
+        // if(result == true){
+        //     document.writeln("Press Ok! <br>");
+        // }
+        // else{
+        //     document.writeln("Press Cancel! <br>");
+        // }
+        
+        //  let result2 = prompt("Sometext", "defaut value");
+        //  document.writeln()
+
+        // let toDay = new Date();
+        // let theDay = toDay.getDay();
+        // switch(theDay) {
+        //     // case Kiem tra co phai thu 6 kh
+        //     case 5:
+        //         document.writeln("Finally Friday");
+        //         break;
+        //     case 6:
+        //         document.writeln("Super Saturday");
+        //         break;
+        //     case 0:
+        //         document.writeln("Sleep Sunday");
+        //         break;
+        //     default:
+        //         document.writeln("I'm looking forward to this weekend");            
+        // }
+
+        //  let arrNum = [0,1,2,3,4,5];
+        // for (let i = 1; i <=1000; i++ ){
+        //     document.writeln(i + "Anh xin loi" +"<br>");
+        // }
+        // document.writeln(arrNum[5] + "<br>");
+
+        // for (let j = 0; j < arrNum.length; j++ ){
+        //     document.writeln(arrNum[j] +"<br>");
+        // } 
+        // let danhSach = ["Lương Ngọc	Bích ", "Dương Gia Bình ", "Nguyễn Như Thành	Danh ", "Hoàng Xuân	Duẩn ", "Hà Văn	Dũng"];
+
+        // for(let i =0; i < danhSach.length; i ++){
+        //     document.writeln("Chao cac ban: " + danhSach[i] + "<br>");
+        // }
+
+        // let i =0
+        //  while (i<=10){
+        //     document.writeln("The number is: " + i + "<br>");
+        //     i=i+1;
+        // }
+         
+         
+
+        //  function + ten ham + (){
+        //     code 
+        //  }
+        // bien toan cuc khai bao bien ngoai ham su dung dc
+        // bien cuc bo la khai bao bien trong ham moi su dung dc 
+        // let name = "Anh Phuong Tuan";
+
+        //  function sayHello(){
+        //      document.writeln("Hello" + name);
+        //  }
+        //  sayHello();
+        // co tham so
+        // function sayHello2(name, age){
+        //     document.writeln("Hello" + name + age +"tuoi");
+        // }
+
+        // let namep = prompt("Ten", "Dien Ten");
+        // let agep = prompt("Tuoi", "Dien Tuoi");
+
+        // sayHello2(namep,agep);
+
+        let N1 = prompt("Nhap so: ");
+        function check(N1) {
+             if (N1 % 2 == 0) {
+                document.write(N1 + " là số chẵn");
+            } else {
+                document.write(N1 + " là số lẻ");
+            }
+        }
+
+        //N1 (abc) is not a number (true)
+        if (!isNaN(N1)) {
+            N1 = parseFloat(N1);
+            check(N1);
+        }
+        else {
+            document.writeln("Vui lòng nhập vào số!");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <script>
+         
+        //  let arr = [6, 12, 8, 34, 67, 5];
+        //  let max = arr[0]
+        //     for (let i = 1; i < arr.length; i++) {
+        //          if (arr[i] > max) {
+        //              max = arr[i];
+        //             }
+        //         }
+                // push day vao vi tri cuoi cung
+
+
+            let diem = [9, 7, 5, 8.5, 6, 4];
+          
+            let max = diem[0];
+            let min = diem[0];
+            let a = 0;
+
+            for (let i = 0; i < diem.length; i++) {
+              if (diem[i] > max) max = diem[i];
+              if (diem[i] < min) min = diem[i];
+                  a += diem[i];
+            
+              if (diem[i] >= 8) {
+                document.writeln(diem[i], ": Giỏi" + "<br>");
+              } else if (diem[i] >= 6.5) {
+                document.writeln(diem[i], ": Khá" + "<br>");
+              } else if (diem[i] >= 5) {
+                document.writeln(diem[i], ": Trung bình" + "<br>");
+              } else {
+                document.writeln(diem[i], ": Yếu" + "<br>");
+              }
+            }
+              document.writeln("Điểm cao nhất:", max + "<br>");
+              document.writeln("Điểm thấp nhất:", min);
+              
+    </script>
+</body>
+</html>
