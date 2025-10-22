@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>baitap</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <script>
+        // Nhập dữ liệu
+        let lop = prompt("Nhập tên lớp:");
+        let soLuong = parseInt(prompt("Nhập số lượng học sinh:"));
+        let diem = [];
+        // Vòng lặp nhập điểm 
+        for (let i=0; i < soLuong; i++){
+            let d = parseInt(prompt("Nhập điểm học sinh thứ" + (i +1)));
+            diem.push(d);
+        } 
+        // Hàm tính trung bình
+        function tinhTrungBinh(arr) {
+            let tong = 0;
+            for (let i = 0; i < arr.length; i++) {
+                tong = tong + arr[i];
+            }
+            return  tong / arr.length;
+        }
+        // Tìm điểm cao nhất và thấp nhất
+        let max = diem[0];
+        let min = diem[0];
+        for (let i = 1; i < diem.length; i++) {
+        if (diem[i] > max) {
+            max = diem[i];
+        }
+        if (diem[i] < min) {
+            min = diem[i];
+        }
+        }
+
+        // Hiển thị kết quả
+        document.writeln("Lớp: " + lop + "<br>");
+        document.writeln("Danh sách điểm: " + diem.join(",") + "<br>");
+        document.writeln("Điểm trung bình: " + tinhTrungBinh(diem).toFixed(2) + "<br>");
+        document.writeln("Điểm cao nhất: " + max + "<br>");
+        document.writeln("Điểm thấp nhất: " + min + "<br>");
+    </script>
+</body>
+</html>

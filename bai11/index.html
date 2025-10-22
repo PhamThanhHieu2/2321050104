@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 11</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <h2>TÍnh điểm</h2>
+    <div>
+        Điểm A : <input type="number" id="diemA" placeholder="Nhập điểm A"><br>
+        Điểm B : <input type="number" id="diemB" placeholder="Nhập điểm B"><br>
+        Điểm C : <input type="number" id="diemC" placeholder="Nhập điểm C"><br>
+    </div>
+    <div>
+        <button onclick="xemketQua()">Tính điểm</button><br>
+        kết quả : <input type="text" id ="xemketQua">
+    </div>
+    <script>
+        function xemketQua() {
+        let diemA = parseFloat(document.getElementById('diemA').value);
+        let diemB = parseFloat(document.getElementById('diemB').value);
+        let diemC = parseFloat(document.getElementById('diemC').value);
+        document.getElementById('xemketQua').value=tinhDiem(diemA,diemB,diemC);
+        }
+        function tinhDiem(A, B, C){
+            let tong;
+            if(kiemTraHopLe(A, B , C) == true){
+                tong = A*0.6 + B*0.3 + C*0.1;
+                return tong;
+            }
+        }
+        function kiemTraHopLe(){
+            let ketQua = true;
+            if(A< 0 || A> 10 || typeof (A) != 'number'){
+                document.writeln("Điểm A không hợp lệ" + "<br>");
+                ketQua = false;
+            }
+            if(B< 0 || B> 10 || typeof (B) != 'number'){
+                document.writeln("Điểm B không hợp lệ" + "<br>");
+                ketQua = false;
+            }  
+            if(C< 0 || C> 10 || typeof (C) != 'number'){
+                document.writeln("Điểm C không hợp lệ" + "<br>");
+                ketQua = false;
+            }
+            return ketQua;
+        }
+        // let A = 10;
+        // let B = 5;
+        // let C = 9;
+        // tinhDiem(A, B , C);
+    </script>
+</body>
+</html>
