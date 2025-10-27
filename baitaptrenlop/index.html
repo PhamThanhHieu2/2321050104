@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .yeu-cau {
+            color: red;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h1>Tính chỉ số BMI</h1>
+    <!-- <p>Công thức: Cân năng / (Chiều cao * Chiều cao)</p>
+    <p>Cân nặng: Kg</p>
+    <p>Chiều cao: m</p> -->
+    <div>
+        Cân Nặng : <input type="number" id="canNang" placeholder="Cân Nặng"><br>
+        Chiều Cao : <input type="number" id="chieuCao" placeholder="Chiều Cao"><br>
+    </div>
+    <button onclick="tinhBMI()"> Tính BMI</button><br>
+       Kết Quả : <input type="text" id ="ketQua">
+       <div id="tinhTrang"></div>
+       <img id="hinhAnh" src="" alt="">
+    <div class="yeu-cau">
+        <!-- <p>Tạo input cho phép nhập vào chiều cao cân nặng</p>
+        <p>Tạo nút bấm kiểm tra chỉ số BMI</p>
+        <p>Trường hợp 1: Người dùng không nhập hoặc nhập sai thông tin phải cảnh báo</p>
+        <p>Trường hợp 2: Nhập đúng, hiển thị được chỉ số BMI và hình ảnh tương ứng</p> -->
+    </div>
+    <script>
+        function tinhBMI() {
+            let canNang = parseFloat(document.getElementById("canNang").value);
+            let chieuCao = parseFloat(document.getElementById("chieuCao").value);
+            if (isNaN(canNang) || isNaN(chieuCao)){
+                alert("Vui lòng nhập lại ")
+                return;
+        }
+             let BMI   = canNang / (chieuCao * chieuCao);
+                 document.getElementById("ketQua").value = BMI.toFixed(2);
+    
+             let tinhTrang = "";
+             let hinhAnh = "";
+              if (BMI < 18.5) {
+                tinhTrang = "Thiếu cân";
+                hinhAnh = "thieu.png";
+              }else if (BMI >= 18.5 && BMI <= 24.9) {
+                tinhTrang = "Bình thường";
+                hinhAnh = "binhthuong.png";
+              }else if (BMI >= 25 && BMI <= 29.9) {
+                tinhTrang = "Thừa cân";
+                hinhAnh = "thua.png";
+              }else if (BMI >= 30 && BMI <= 39.9) {
+                tinhTrang = "Béo phì cấp độ 1";
+                hinhAnh = "beocapdo1.png";
+              }else if (BMI >= 40) {
+                tinhTrang = "Béo phì nặng";
+                hinhAnh = "beonang.png";
+        }
+            document.getElementById("tinhTrang").innerText = tinhTrang;
+            document.getElementById("hinhAnh").src = hinhAnh;
+    }
+
+ </script>
+</body>
+
+</html>
