@@ -16,33 +16,65 @@
     <div>
         <button onclick="xemketQua()">Tính điểm</button><br>
         kết quả : <input type="text" id ="xemketQua">
+        Diem Chu : <input type="text" id="DiemChu" > 
     </div>
     <script>
         function xemketQua() {
-        let diemA = parseFloat(document.getElementById('diemA').value);
-        let diemB = parseFloat(document.getElementById('diemB').value);
-        let diemC = parseFloat(document.getElementById('diemC').value);
-        document.getElementById('xemketQua').value=tinhDiem(diemA,diemB,diemC);
-        }
+            let diemA = parseFloat(document.getElementById('diemA').value);
+            let diemB = parseFloat(document.getElementById('diemB').value);
+            let diemC = parseFloat(document.getElementById('diemC').value);
+            document.getElementById('xemketQua').value = tinhDiem(diemA, diemB, diemC);
+        
+       }
         function tinhDiem(A, B, C){
             let tong;
             if(kiemTraHopLe(A, B , C) == true){
-                tong = A*0.6 + B*0.3 + C*0.1;
-                return tong;
-            }
-        }
-        function kiemTraHopLe(){
+                 tong = A*0.6 + B*0.3 + C*0.1;
+               return tong; 
+            }    
+        function tinhDiemChu(A, B, C)  {         
+            if (tong >= 9) {
+               return "diem chu la A+ ";
+           } 
+            else if (tong >= 8.5 && tong < 9) {
+               return "diem chu la A ";
+           } 
+            else if (tong >= 8 && tong < 8.5) {
+              return "diem chu la B+ ";
+           } 
+            else if (tong >= 7.5 && tong < 8) {
+             return "diem chu la B ";
+           } 
+            else if (tong >= 7 && tong < 7.5) {
+             return "diem chu la C+ ";
+           }  
+            else if (tong >= 6.5 && tong < 7) {
+             return "diem chu la C ";
+           } 
+            else if (tong >= 6 && tong < 6.5) {
+             return "diem chu la D+ ";
+           } 
+            else if (tong >= 5 && tong < 6) {
+             return "diem chu la D ";
+           } 
+            else {
+             return "diem chu la F ";
+           } 
+         }
+         return tinhDiemChu;
+    }    
+        function kiemTraHopLe(A, B, C){
             let ketQua = true;
             if(A< 0 || A> 10 || typeof (A) != 'number'){
-                document.writeln("Điểm A không hợp lệ" + "<br>");
+                return ln("Điểm A không hợp lệ" + "<br>");
                 ketQua = false;
             }
             if(B< 0 || B> 10 || typeof (B) != 'number'){
-                document.writeln("Điểm B không hợp lệ" + "<br>");
+                return ln("Điểm B không hợp lệ" + "<br>");
                 ketQua = false;
             }  
             if(C< 0 || C> 10 || typeof (C) != 'number'){
-                document.writeln("Điểm C không hợp lệ" + "<br>");
+                return ln("Điểm C không hợp lệ" + "<br>");
                 ketQua = false;
             }
             return ketQua;

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- Tính tiền điện (theo bậc thang)
+       Yêu cầu:
+       Nhập số kWh tiêu thụ.
+       Tính tiền theo quy tắc:
+       0–50 kWh: 1.800đ/kWh
+       51–100 kWh: 2.000đ/kWh
+       Trên 100 kWh: 2.500đ/kWh
+       Hiển thị tiền và cảnh báo nếu nhập sai. -->
+    <!-- <h2>Tính tiền điện</h2>
+    <div>
+       Số điện (kWh): <input type="number" id="soDien"><br>
+    </div>
+    <div>
+         <button onclick="tinhTien()">Tính tiền</button><br>
+          Kết quả: <input type="text" id="ketqua">
+    </div>
+  <script>
+    function tinhTien() {
+        let so = parseFloat(document.getElementById('soDien').value);
+        if (isNaN(so) || so < 0) {
+            alert("Số điện không hợp lệ!");
+            return;
+        }
+        let tien;
+        if (so <= 50) tien = so * 1800;
+        else if (so <= 100) tien = 50*1800 + (so-50)*2000;
+        else tien = 50*1800 + 50*2000 + (so-100)*2500;
+  
+        document.getElementById('ketqua').value = tien.toLocaleString() + " VNĐ";
+    }
+    </script> -->
+    <!-- Tính thuế thu nhập cá nhân
+     Yêu cầu:
+     Nhập lương (triệu đồng).
+     Nếu lương ≤ 10: không thuế
+     10–20: 10%
+     20–50: 20%
+     50: 30%
+     Hiển thị thuế và lương thực nhận. -->
+
+       <h2>Tính thuế thu nhập</h2>
+      <div>
+          Lương (triệu): <input type="number" id="luong"><br>
+      </div>
+      <div>
+          <button onclick="xemThuNhap()">Tính</button><br>
+          Kết quả: <input type="text" id="ketqua">
+      </div>
+
+      <script>
+         function xemThuNhap() {
+            let luong = parseFloat(document.getElementById('luong').value);
+            if (isNaN(luong) || luong < 0) {
+            alert("Lương không hợp lệ!");
+            return;
+        }
+          let thue = tinhThue(luong);
+          let thucNhan = luong - thue;
+            document.getElementById('ketqua').value = 
+            'Thuế: ${thue.toFixed(2)} triệu - Thực nhận: ${thucNhan.toFixed(2)} triệu';
+        }
+
+          function tinhThue(l) {
+           if (l <= 10) return 0;
+           else if (l <= 20) return l*0.1;
+           else if (l <= 50) return l*0.2;
+           else return l*0.3;
+       }
+</script>
+</body>
+</html>
