@@ -1,59 +1,159 @@
- body {
-    background-color: #f0f2f5;
+*{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
 }
 
-.container {
-    height: 90vh;
-    width: 700px;
-    margin: auto;
+body{
+    height: 2000px;
+}
+header{
+    width: 100%;
+    height: 100px;
+    background-color: red;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+}
+.container{
+    padding-top: 100px;
+    text-align: center;
 }
 
-.form-nhap-thong-tin {
-    background-color: white;
-    height: auto;
-    width: 550px;
-    margin: 50px auto;
-    border-radius: 10px;
-}
-
-input {
+.container-banner{
+    background-color: #ECEFF1;
     padding: 10px;
-    border: 1px solid gray;
-    border-radius: 7px;
 }
+.container-banner a{
+    font-size: 14px;
+    font-weight: 700;
+}
+.list-shop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px;
+    gap: 5px;
+}
+.advertisement-shop{
+    background-color: #000000;
+    width: 300px;
+    height: 300px;
+    color: #fff;
+     box-shadow: 0px 2px 3px rgba(203, 190, 190, 0.3);
+}
+.advertisement{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 20px;
+    padding: 15px;
+}
+.advertisement h2{
+    font-size: 30px;
+}
+.advertisement p{
+    font-size: 15px;
 
-button {
-    padding: 10px 40px;
-    background-color: green;
-    color: white;
-    border: none;
+}
+.advertisement button{
+    padding: 10px;
+    font-weight: 600;
     border-radius: 5px;
+    border: none;
 }
-
-a {
+.advertisement button:hover{
+    cursor: pointer;
+    background-color: #a79f9f;
+    color: #fff;
+}
+.shop-shoes a{
     text-decoration: none;
 }
-
-.tieu-de {
-    text-align: center;
-} 
-
-select {
-    padding: 10px;
-    width: 30%;
+.shop-shoes{
+    width: 300px;
+    height: 300px;  
+    background-color: #ECEFF1;
+     box-shadow: 0px 2px 3px rgba(203, 190, 190, 0.3); /* đổ bóng xám nhẹ */
 }
+.shop-shoes a img{
+    width: 200px;
+    height: 200px;
+}
+.content{
+    display: flex;
+    font-size: 14px;
+    gap: 2px;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+.mini-icon{
+    color: red;
+    padding: 5px;
+    background-color: #fff;
+    font-weight: 700;
 
-.gioi-tinh {
+}
+.shop-icon{
+    padding: 5px;
+    background-color: #fff;
+    color: #000000;
+    font-weight: 700;
+
+}
+.slide-product{
+    position: relative;
+    width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+.product-man{
+    display: flex;
+    transform: translateX();
+    transition: all 0.2s ease;
+}
+.products{
     border: 1px solid gray;
-    padding: 10px;
-    border-radius: 5px;
-    width: 28%;
+    flex: 0 0 25%;
+} 
+.picture-shoe{
+    width: 100%;
 }
 
-.mg-t {
-    margin-top: 10px;
+.name-shoe{
+    font-weight: 700;
+    color: red;
+    padding: 5px;
 }
-
-.mg-t input {
-    width: 90%;
+.price-shoe{
+    padding: 5px;
+}
+.news-shoe button{
+    background-color: #000000;
+    color: #fff;
+    padding: 5px 10px;
+}
+.fa{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0.3;
+}
+.left, .right{
+    font-size: 40px;
+}
+.fa-arrow-circle-left{
+    left: 0;
+    
+}
+.fa-arrow-circle-right{
+    right: 0;
+}
+.fa:hover{
+    opacity: 1;
 }

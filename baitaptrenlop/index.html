@@ -7,64 +7,127 @@
     <title>Document</title>
     <style>
         .yeu-cau {
-            color: red;
-        }
-        
+           color: red;
+      }
+        body { 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+        .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 20px;
+        background-color: aqua;
+        border-radius: 20px;
+        margin-top: 220px; 
+      }
+       .bentrai {
+        width: 50%;
+        margin: 10px;
+      }
+       .bentrai h1 {
+        color: black;
+        text-align: center;
+      }
+       .canNang {
+        margin-bottom: 10px;
+        margin-top: 5px;
+      }
+       .chieuCao {
+        margin-bottom: 10px;
+        margin-top: 5px;
+      }
+       button {
+        margin-top: 15px;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-weight: bold;
+      }
+       #tinhTrang {
+        margin-top: 15px;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+      }
+       .benphai {
+        width: 50%;
+        margin: 10px;
+      }
     </style>
 </head>
 
 <body>
+  <div class="container">
+    <div class="bentrai">
     <h1>Tính chỉ số BMI</h1>
-    <!-- <p>Công thức: Cân năng / (Chiều cao * Chiều cao)</p>
+     <!-- <p>Công thức: Cân năng / (Chiều cao * Chiều cao)</p>
     <p>Cân nặng: Kg</p>
-    <p>Chiều cao: m</p> -->
-    <div>
-        Cân Nặng : <input type="number" id="canNang" placeholder="Cân Nặng"><br>
-        Chiều Cao : <input type="number" id="chieuCao" placeholder="Chiều Cao"><br>
-    </div>
-    <button onclick="tinhBMI()"> Tính BMI</button><br>
-       Kết Quả : <input type="text" id ="ketQua">
-       <div id="tinhTrang"></div>
+    <p>Chiều cao: m</p>  -->
+      <div class="cannang">
+        Cân Nặng (kg) : <input type="number" id="canNang" placeholder="Cân Nặng"><br>
+        </div>
+      <div class="chieucao">
+        Chiều Cao (m) : <input type="number" id="chieuCao" placeholder="Chiều Cao"><br>
+        </div>
+      <div><button onclick="tinhBMI()">Kiểm Tra</button><br></div>
+             
+      <div id="tinhTrang"></div>
+      </div>
+      <div class="benphai">
        <img id="hinhAnh" src="" alt="">
+        </div>
     <div class="yeu-cau">
         <!-- <p>Tạo input cho phép nhập vào chiều cao cân nặng</p>
         <p>Tạo nút bấm kiểm tra chỉ số BMI</p>
         <p>Trường hợp 1: Người dùng không nhập hoặc nhập sai thông tin phải cảnh báo</p>
         <p>Trường hợp 2: Nhập đúng, hiển thị được chỉ số BMI và hình ảnh tương ứng</p> -->
-    </div>
+       </div>
+    </div> 
     <script>
+        function kiemtra(chieuCao,canNang){
+            let ketQua = true;
+             if (isNaN(canNang) || canNang <= 0 || canNang > 150){
+              document.getElementById("tinhTrang").innerHTML = "Cân nặng không hợp lệ <br>";
+               ketQua = false;
+            } 
+             if (isNaN(chieuCao) || chieuCao <= 0 || chieuCao > 3.0){ 
+              document.getElementById("tinhTrang").innerHTML += "Chiều cao không hợp lệ ";
+               ketQua = false;
+            }
+            return ketQua;
+        }     
         function tinhBMI() {
             let canNang = parseFloat(document.getElementById("canNang").value);
             let chieuCao = parseFloat(document.getElementById("chieuCao").value);
-            if (isNaN(canNang) || isNaN(chieuCao)){
-                alert("Vui lòng nhập lại ")
-                return;
-        }
-             let BMI   = canNang / (chieuCao * chieuCao);
-                 document.getElementById("ketQua").value = BMI.toFixed(2);
-    
-             let tinhTrang = "";
-             let hinhAnh = "";
-              if (BMI < 18.5) {
-                tinhTrang = "Thiếu cân";
-                hinhAnh = "thieu.png";
-              }else if (BMI >= 18.5 && BMI <= 24.9) {
-                tinhTrang = "Bình thường";
-                hinhAnh = "binhthuong.png";
-              }else if (BMI >= 25 && BMI <= 29.9) {
-                tinhTrang = "Thừa cân";
-                hinhAnh = "thua.png";
-              }else if (BMI >= 30 && BMI <= 39.9) {
-                tinhTrang = "Béo phì cấp độ 1";
-                hinhAnh = "beocapdo1.png";
-              }else if (BMI >= 40) {
-                tinhTrang = "Béo phì nặng";
-                hinhAnh = "beonang.png";
-        }
-            document.getElementById("tinhTrang").innerText = tinhTrang;
-            document.getElementById("hinhAnh").src = hinhAnh;
-    }
+            let ketQua = document.getElementById("tinhTrang");
+            let anh = document.getElementById("hinhAnh");
 
+            let BMI;
+              if (kiemtra(chieuCao, canNang) == false) {
+                  return;
+              }else {
+               BMI = canNang / (chieuCao * chieuCao);
+              document.getElementById("tinhTrang").innerHTML = BMI.toFixed(2);
+              }
+              if (BMI < 18.5) {
+                document.getElementById("hinhAnh").src ="thieu.png";
+                document.getElementById("tinhTrang").innerHTML ="Thiếu cân";
+              }else if (BMI >= 18.5 && BMI <= 24.9) {
+               document.getElementById("hinhAnh").src = "binhthuong.png";
+               document.getElementById("tinhTrang").innerHTML = "Bình Thường";
+              }else if (BMI >= 25 && BMI <= 29.9) {
+               document.getElementById("hinhAnh").src ="thua.png";
+               document.getElementById("tinhTrang").innerHTML ="Thừa cân";
+              }else if (BMI >= 30 && BMI <= 39.9) {
+                document.getElementById("hinhAnh").src ="beocapdo1.png";
+                document.getElementById("tinhTrang").innerHTML ="Béo cấp độ 1";
+              }else if (BMI >= 40) {
+               document.getElementById("hinhAnh").src ="beonang.png";
+               document.getElementById("tinhTrang").innerHTML ="Béo phì";
+              }
+            }          
  </script>
 </body>
 

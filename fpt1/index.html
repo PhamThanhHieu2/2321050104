@@ -40,27 +40,45 @@
         </div>
         <div class="container">
             <div>
-                <div style="display: flex; justify-content: center;">
+                <div class="quangcao-phim">
                     <img class="banner" src="640x396-muado.jpg" alt="">
+                    <iframe class="trailer" width="913" height="514" src="https://www.youtube.com/embed/-nJ0WHEetsQ?list=RD-nJ0WHEetsQ" title="&#39;CÒN GÌ ĐẸP HƠN&#39; (ca khúc lấy cảm hứng từ phim Mưa đỏ) - Nguyễn Hùng | Lyric Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="danhsach-tt">
+                        <div class="tt">
+                            <ul>
+                                <li class="tt-year">2025</li>
+                                <li class="tt-phanloaidotuoi">T16</li>
+                                <li class="tt-hour">2 Giờ</li>
+                                <li class="tt-nation">Việt Nam</li>
+                            </ul>
+                        </div>
+                        <div style="display: flex; justify-content: center; gap: 20px">
+                            <button onclick="viewTrailer()" class="xemngay"><i class="fa fa-play" 
+                                aria-hidden="true"></i>Xem ngay</button> 
+                        </div>
+                        <div>
+                            <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        </div>
+                    </div>
                 </div>
+                </div>  
                 <div style="display: flex; justify-content: center;">
                     <img class="qc" src="qc.jpg" alt="">
                 </div>
-            </div>
-            <div class="theloai">
+             <div class="theloai">
                 <div class="tentheloai">
                     Phim chiếu rạp
                 </div>
                 <div class="danhsach">
-                    <div class="phim">
-                        <div class="anh">
+                    <div class="phim" onclick="chooseFilm(1)">
+                        <div class="anh">   
                             <img src="Hijack-1971-pic1-poster_KP.webp" alt="">
                         </div>
                         <div class="ten">
                             Vây Hãm Trên Không
                         </div>
                     </div>
-                    <div class="phim">
+                    <div class="phim" onclick="chooseFilm(2)">
                         <div class="anh">
                             <img src="350x495-muado.jpg" alt="">
                         </div>
@@ -68,7 +86,7 @@
                              Mưa đỏ
                         </div>  
                     </div>
-                    <div class="phim">
+                    <div class="phim" onclick="chooseFilm(3)">
                         <div class="anh">
                             <img src="thanh-pho-bong-dem-2024.jpg" alt="">
                         </div>
@@ -76,7 +94,7 @@
                            Thành Phố Bóng Đêm
                         </div>
                     </div>
-                    <div class="phim">
+                    <div class="phim" onclick="chooseFilm(4)">  
                         <div class="anh">
                             <img src="66ed5e0215766604667464.jpg" alt="">
                         </div>
@@ -84,7 +102,7 @@
                             Nơi Tình Yêu Kết Thúc
                         </div>
                     </div>
-                    <div class="phim">
+                    <div class="phim" onclick="chooseFilm(5)">
                         <div class="anh">
                             <img src="unnamed.png" alt="">
                         </div>
@@ -330,6 +348,11 @@
                 </div>
             </div>
         </div>
+      <!-- <script> 
+        function chuyentraller(){
+            document.getElementById('banner').src =""
+        }
+        </script>  -->
     </main>
     <footer>
       <div class="footer-container">
@@ -397,6 +420,7 @@
             <p>Giấy phép cung cấp dịch vụ phát thanh, truyền hình trả tiền số 377/GP-BTTTT cấp sửa đổi bổ sung lần 1 ngày 10/10/2023.</p>
         </div>
     </footer>
+       <script src="scrip.js"></script>
 </body>
 
 </html>

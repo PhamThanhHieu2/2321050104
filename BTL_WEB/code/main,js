@@ -1,0 +1,49 @@
+
+// BẤM NÚT CHUYỂN ANH
+let slideProducts = document.querySelectorAll('.slide-product');
+
+    slideProducts.forEach(slide => {
+        let listShoe = slide.querySelector('.product-man');
+        let products = slide.querySelectorAll('.products');
+        let right = slide.querySelector('.right');
+        let left = slide.querySelector('.left');
+
+        let current = 0;
+        let visible = 4; // số sản phẩm hiển thị cùng lúc
+        let length = products.length;
+
+        // Chuyên ảnh khi bấm nút bên phải
+        function handleChangeSlide() {
+            let width = products[0].offsetWidth;
+            if (current >= length - visible) {
+                current = 0;
+                listShoe.style.transform = `translateX(0px)`;
+            } else {
+                current++;
+                listShoe.style.transform = `translateX(${width *-1*current}px)`;
+            }
+            
+        }
+         //Gnans vòng lặp
+        let autoSlide = setInterval(handleChangeSlide, 4000);
+        //Gắn sự kiện khi bấm nút phải
+        right.addEventListener('click', () => {
+            clearInterval(autoSlide);
+            handleChangeSlide();
+            autoSlide = setInterval(handleChangeSlide, 4000);
+        });
+        //Gắn sự kiện khi bấm nút trái
+        left.addEventListener('click', () => {
+            clearInterval(autoSlide);
+            let width = products[0].offsetWidth;
+            if (current === 0) {
+                current = length - visible;
+                listShoe.style.transform = `translateX(${width *-1 * current}px)`;
+            } else {
+                current--;
+                listShoe.style.transform = `translateX(${width *-1 * current}px)`;
+            }
+            autoSlide = setInterval(handleChangeSlide, 4000);
+        });
+    });
+    
